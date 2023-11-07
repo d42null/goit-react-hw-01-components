@@ -13,7 +13,7 @@ export const Status = styled.span`
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  background-color: ${({ isOnline }) => (isOnline ? 'green' : 'red')};
+  background-color: ${({ $isOnline }) => ($isOnline ? 'green' : 'red')};
 `;
 export const Avatar = styled.img`
   display: block;
