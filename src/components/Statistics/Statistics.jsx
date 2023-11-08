@@ -11,17 +11,17 @@ export const Statistics = ({ title, stats }) => (
   <Statistic>
     {title && <Title>{title}</Title>}
     <StatList>
-      {stats.map(stat => (
+      {stats.map(({ id, label, percentage }) => (
         <ListItem
-          key={stat.id}
+          key={id}
           style={{
             backgroundColor: `#${Math.floor(16777215 * Math.random())
               .toString(16)
               .padStart(6, 0)}`,
           }}
         >
-          <Label>{stat.label}</Label>
-          <Percentage>{stat.percentage}%</Percentage>
+          <Label>{label}</Label>
+          <Percentage>{percentage}%</Percentage>
         </ListItem>
       ))}
     </StatList>
